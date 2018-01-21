@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyLinearLayout</string>
+    <string name="ini_textview">Ini TextView</string>
+</resources>
