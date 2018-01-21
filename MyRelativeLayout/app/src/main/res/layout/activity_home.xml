@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.omrobbie.myrelativelayout.HomeActivity">
+
+    <View
+        android:id="@+id/vCenter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="#ff0000" />
+
+    <View
+        android:id="@+id/vUp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/vCenter"
+        android:layout_centerInParent="true"
+        android:background="#fff200" />
+
+    <View
+        android:id="@+id/vRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/vCenter"
+        android:background="#15ff00" />
+
+    <View
+        android:id="@+id/vDown"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/vCenter"
+        android:layout_centerInParent="true"
+        android:background="#0033ff" />
+
+    <View
+        android:id="@+id/vLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/vCenter"
+        android:background="#e100ff" />
+
+    <View
+        android:id="@+id/vParentUpLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:background="#ff0000" />
+
+    <View
+        android:id="@+id/vParentUpRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="#fff200" />
+
+    <View
+        android:id="@+id/vParentDownLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#15ff00" />
+
+    <View
+        android:id="@+id/vParentDownRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#0033ff" />
+
+</RelativeLayout>

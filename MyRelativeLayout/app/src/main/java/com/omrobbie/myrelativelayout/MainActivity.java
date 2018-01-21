@@ -1,5 +1,6 @@
 package com.omrobbie.myrelativelayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -43,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if (uname.equals("admin") && upass.equals("123")) {
                 Toast.makeText(this, "Anda berhasil login!", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
             }
         }
     }
