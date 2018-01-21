@@ -1,5 +1,6 @@
 package com.omrobbie.mylinearlayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -48,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (uname.equals("admin") && upass.equals("123")) {
                         Toast.makeText(MainActivity.this, "Anda berhasil login!", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                        startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(MainActivity.this, "Username dan Password belum benar!", Toast.LENGTH_SHORT).show();
                     }
