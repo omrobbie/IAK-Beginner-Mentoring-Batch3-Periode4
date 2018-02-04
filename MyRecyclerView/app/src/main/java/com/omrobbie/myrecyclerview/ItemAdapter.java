@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -55,7 +56,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         private TextView tv_judul;
         private TextView tv_content;
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(final View itemView) {
             super(itemView);
 
             iv_avatar = (CircleImageView) itemView.findViewById(R.id.iv_avatar);
@@ -63,10 +64,17 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             tv_content = (TextView) itemView.findViewById(R.id.tv_content);
         }
 
-        public void bind(ItemData itemData) {
+        public void bind(final ItemData itemData) {
             iv_avatar.setImageResource(itemData.getAvatar());
             tv_judul.setText(itemData.getJudul());
             tv_content.setText(itemData.getContent());
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(itemView.getContext(), itemData.getJudul(), Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 }
