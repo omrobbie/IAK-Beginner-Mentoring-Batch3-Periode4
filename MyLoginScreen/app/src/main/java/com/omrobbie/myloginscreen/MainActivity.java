@@ -1,5 +1,6 @@
 package com.omrobbie.myloginscreen;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -45,12 +46,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String uname = et_username.getText().toString();
+                String upass = et_password.getText().toString();
 
-                login_data.putString("dataOn", "ON");
-                login_data.putString("username", uname);
-                login_data.apply();
+                if (!uname.isEmpty() && !upass.isEmpty()) {
+                    login_data.putString("dataOn", "ON");
+                    login_data.putString("username", uname);
+                    login_data.apply();
 
-                Toast.makeText(MainActivity.this, "Login berhasil!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Login berhasil!", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Data anda belum lengkap!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
