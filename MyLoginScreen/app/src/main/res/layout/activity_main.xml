@@ -32,6 +32,7 @@
                 android:padding="24dp">
 
                 <ImageView
+                    android:id="@+id/iv_avatar"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
@@ -67,6 +68,14 @@
                     android:layout_marginTop="32dp"
                     android:backgroundTint="@android:color/holo_green_dark"
                     android:text="Login"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btn_random"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:text="Get Random User"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
