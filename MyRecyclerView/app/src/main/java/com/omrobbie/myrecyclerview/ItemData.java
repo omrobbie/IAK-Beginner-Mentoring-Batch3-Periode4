@@ -10,6 +10,12 @@ public class ItemData {
     private String judul;
     private String content;
 
+    public ItemData(int avatar, String judul, String content) {
+        this.avatar = avatar;
+        this.judul = judul;
+        this.content = content;
+    }
+
     public int getAvatar() {
         return avatar;
     }
