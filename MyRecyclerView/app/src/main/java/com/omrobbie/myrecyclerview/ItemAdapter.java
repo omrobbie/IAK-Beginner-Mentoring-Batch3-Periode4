@@ -1,5 +1,6 @@
 package com.omrobbie.myrecyclerview;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,6 +74,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(itemView.getContext(), itemData.getJudul(), Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(itemView.getContext(), DetailActivity.class);
+
+                    intent.putExtra("avatar", itemData.getAvatar());
+                    intent.putExtra("judul", itemData.getJudul());
+                    intent.putExtra("content", itemData.getContent());
+
+                    itemView.getContext().startActivity(intent);
                 }
             });
         }
